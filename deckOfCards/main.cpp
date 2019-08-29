@@ -30,12 +30,9 @@ int main(int argc, const char * argv[]) {
     
     cout << endl << isFlush(hand);
     cout << endl << "Straight: " << isStraight(hand);
-<<<<<<< HEAD
-=======
     cout << endl << "Straight Flush: " << isStraightFlush(hand);
     cout << endl << "Royal Flush: " << isRoyalFlush(hand);
     
->>>>>>> 7bfee4bbd3352cbf956c32c11147841acc22876f
     
     //Testing out sort function
     /*vector <int> numbers = {8,4,3,5,3,7,9};
