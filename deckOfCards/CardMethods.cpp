@@ -68,9 +68,36 @@ bool isStraight(vector <Card> hand){
 }
 
 
-// isRoyalFlush function
-bool isRoyalFlush(vector<Card> hand) {
+// isStraightFlush function
+bool isStraightFlush(vector <Card> hand){
     
-    // return true if isStraightFlush and value @ index 0 = 10
-    return (isStraightFlush(hand) && hand[0].value == 10);
+    //check if it is a straight and if it is a flush
+    return(isStraight(hand) && isFlush(hand));
+}
+
+
+// isRoyalFlush function
+bool isRoyalFlush(vector<Card> hand){
+    //Check to see if it is a straight flush and if the lowest card is 10 it's a royal flush
+    return(isStraightFlush(hand) && hand[0].value == 10);
+}
+
+
+// isThreeOfAKind function
+bool isThreeOfAKind(vector<Card> hand){
+    
+    //sort hand to be in order by value
+    sort(hand.begin(), hand.end(), my_cmp);
+    
+    // Check if indexes 0, 1, 2 are equal or if 2, 3, 4 are equal & return
+     return ((hand[0].value == hand[1].value && hand[1].value == hand[2].value) || (hand[2].value == hand[3].value && hand[3].value == hand[4].value));
+}
+
+bool isFullHouse (vector<Card> hand) {
+    
+    // Sort hand using my_cmp
+    sort(hand.begin(), hand.end(), my_cmp);
+    
+    // Check if indexes 0 and 1 are equal or if 3 and 4 are equal & return
+    return ((hand[0].value == hand[1].value || hand[3].value == hand[4].value) && isThreeOfAKind(hand));
 }
