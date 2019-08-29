@@ -2,8 +2,8 @@
 //  Shuffle.hpp
 //  deckOfCards
 //
-//  Created by Jacob Wheeler on 8/28/19.
-//  Copyright © 2019 Jacob Wheeler. All rights reserved.
+//  Created by Jacob Wheeler & Gabe Cerritos on 8/28/19.
+//  Copyright © 2019 Jacob Wheeler & Gabe Cerritos. All rights reserved.
 //
 
 #ifndef Shuffle_hpp

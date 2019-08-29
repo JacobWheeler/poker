@@ -2,8 +2,8 @@
 //  Shuffle.cpp
 //  deckOfCards
 //
-//  Created by Jacob Wheeler on 8/28/19.
-//  Copyright © 2019 Jacob Wheeler. All rights reserved.
+//  Created by Jacob Wheeler & Gabe Cerritos on 8/28/19.
+//  Copyright © 2019 Jacob Wheeler & Gabe Cerritos. All rights reserved.
 //
 
 #include "CardMethods.hpp"
@@ -93,6 +93,8 @@ bool isThreeOfAKind(vector<Card> hand){
      return ((hand[0].value == hand[1].value && hand[1].value == hand[2].value) || (hand[2].value == hand[3].value && hand[3].value == hand[4].value));
 }
 
+
+// isFullHouse function
 bool isFullHouse (vector<Card> hand) {
     
     // Sort hand using my_cmp

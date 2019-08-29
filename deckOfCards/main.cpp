@@ -2,8 +2,8 @@
 //  main.cpp
 //  deckOfCards
 //
-//  Created by Jacob Wheeler on 8/27/19.
-//  Copyright © 2019 Jacob Wheeler. All rights reserved.
+//  Created by Jacob Wheeler & Gabe Cerritos on 8/27/19.
+//  Copyright © 2019 Jacob Wheeler & Gabe Cerritos. All rights reserved.
 //
 
 #include "Cards.hpp"
