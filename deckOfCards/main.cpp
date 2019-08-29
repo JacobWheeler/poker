@@ -12,7 +12,7 @@
 
 int main(int argc, const char * argv[]) {
     
-    std::srand(std::time(nullptr)); // use current time as seed for random generator
+    srand(time(nullptr)); // use current time as seed for random generator
     
     vector <Card> deck = CreateDeck();
     PrintDeck(deck);
@@ -30,6 +30,7 @@ int main(int argc, const char * argv[]) {
     
     cout << endl << isFlush(hand);
     cout << endl << "Straight: " << isStraight(hand);
+    
     //Testing out sort function
     /*vector <int> numbers = {8,4,3,5,3,7,9};
     sort(numbers.begin(), numbers.end());
