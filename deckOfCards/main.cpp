@@ -40,8 +40,11 @@ int main(int argc, const char * argv[]) {
     for(int i = 0; i < numbers.size(); i++)
         cout << numbers[i] << " ";*/
     //Sort function working for cards
-    sort(hand.begin(), hand.end(), my_cmp);
+    //sort(hand.begin(), hand.end(), my_cmp);
+    selectionSort(hand);
+    
     for(int i = 0; i < hand.size(); i++)
         cout << endl << hand[i].value << " " << hand[i].suit;
+    
     return 0;
 }

@@ -8,6 +8,7 @@
 
 #include "CardMethods.hpp"
 
+
 // ShuffleDeck function
 void ShuffleDeck(vector <Card>& deck){
     
@@ -56,12 +57,33 @@ bool my_cmp( const Card& a, const Card& b){
     return a.value < b.value;
 }
 
+//Our own sort function
+void selectionSort (vector <Card>& hand){
+    
+    //Variables
+    int min;
+    
+    for(int i = 0; i < hand.size()-1; i++){
+        min = i;
+        for(int j = i+1; j < hand.size(); j++){
+            if(hand[j].value < hand[min].value){
+                min = j;
+            }
+        }
+        swap(hand[min], hand[i]);
+    }
+    
+}
+
 
 // isStraight function
 bool isStraight(vector <Card> hand){
     
     // Sort hand using my_cmp
-    sort(hand.begin(), hand.end(), my_cmp);
+    //sort(hand.begin(), hand.end(), my_cmp);
+    
+    //Select sort
+    selectionSort(hand);
     
     // return true if values are sequential
     return ((hand[0].value + 1) == hand[1].value && (hand[1].value + 1) == hand[2].value && (hand[2].value + 1) == hand[3].value && (hand[3].value + 1) == hand[4].value);

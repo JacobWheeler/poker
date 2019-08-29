@@ -10,6 +10,7 @@
 #define Shuffle_hpp
 #include <cstdlib>
 #include <stdio.h>
+#include <algorithm>
 #include "Cards.hpp"
 
 
@@ -26,5 +27,6 @@ bool isStraightFlush(vector<Card> hand);
 bool isRoyalFlush(vector<Card> hand);
 bool isThreeOfAKind (vector<Card> hand);
 bool isFullHouse (vector<Card> hand);
+void selectionSort (vector <Card>& hand);
 
 #endif /* Shuffle_hpp */
