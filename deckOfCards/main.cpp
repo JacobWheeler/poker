@@ -30,6 +30,10 @@ int main(int argc, const char * argv[]) {
     
     cout << endl << isFlush(hand);
     cout << endl << "Straight: " << isStraight(hand);
+    cout << endl << "Straight Flush: " << isStraightFlush(hand);
+    cout << endl << "Royal Flush: " << isRoyalFlush(hand);
+    
+    
     //Testing out sort function
     /*vector <int> numbers = {8,4,3,5,3,7,9};
     sort(numbers.begin(), numbers.end());

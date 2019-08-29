@@ -35,8 +35,24 @@ bool my_cmp( const Card& a, const Card& b){
     return a.value < b.value;
 }
 bool isStraight(vector <Card> hand){
+    //sort hand to be in order by value
     sort(hand.begin(), hand.end(), my_cmp);
+    //check to see if it is a straight
     return((hand[0].value + 1) == hand[1].value && (hand[1].value + 1) == hand[2].value && (hand[2].value + 1) == hand[3].value && (hand[3].value + 1) == hand[4].value);
+}
+bool isStraightFlush(vector <Card> hand){
+    //check if it is a straight and if it is a flush
+    return(isStraight(hand) && isFlush(hand));
+}
+bool isRoyalFlush(vector<Card> hand){
+    //Check to see if it is a straight flush and if the lowest card is 10 it's a royal flush
+    return(isStraightFlush(hand) && hand[0].value == 10);
+}
+bool isPair(vector<Card> hand){
+    //sort hand to be in order by value
+    sort(hand.begin(), hand.end(), my_cmp);
+    
+     return(hand[0].value == hand[1].value || hand[1].value == hand[2].value || hand[2].value == hand[3].value || hand[3].value == hand[4].value);
 }
 // Compare function to use for sort
 
